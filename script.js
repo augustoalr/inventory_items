@@ -172,6 +172,8 @@ itemForm.addEventListener('submit', async (e) => {
             document.getElementById('itemDescription').value = item.description;
             document.getElementById('itemPrice').value = item.price;
             document.getElementById('itemLocation').value = item.location;
+            document.getElementById('itemContact').value = item.contact || ''; // <-- AÑADIDO
+            document.getElementById('itemLink').value = item.link || '';       // <-- AÑADIDO
             
             // Cambiar el texto del botón y hacer scroll hacia el formulario
             submitButton.textContent = 'Update Item';
