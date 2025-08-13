@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Items List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Moving Sale Items</h1>
+        
+        <form id="itemForm">
+            <input type="hidden" id="itemId">
+            <input type="text" id="itemDescription" placeholder="Description (e.g., 'Wooden Chair')">
+            <input type="number" id="itemPrice" placeholder="Price (AED)" step="0.01">
+            <input type="text" id="itemLocation" placeholder="Location (e.g., 'Living Room')">
+        
+            <input type="tel" id="itemContact" placeholder="Contact Phone (optional)">
+        
+            <input type="url" id="itemLink" placeholder="Link to gallery/marketplace (optional)">
+        
+            <p style="font-size: 0.9em; color: #666; margin: 0;">Add a preview image (optional):</p>
+            <input type="file" id="itemImage" accept="image/*" capture="environment">
+        
+            <button type="submit" id="submitButton">Add Item</button>
+        </form>
+
+        <hr>
+
+        <h2>My List</h2>
+        <div id="itemList"></div>
+
+        <button id="exportPdfButton" class="export-button">Export to PDF</button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
